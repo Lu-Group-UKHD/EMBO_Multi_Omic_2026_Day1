@@ -36,7 +36,6 @@ library("data.table")
 library("ggplot2")
 library("tidyverse")
 library("MOFA2")
-reticulate::use_python("/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12")
 ```
 
 # Load data 
@@ -162,7 +161,7 @@ MOFAobject = prepare_mofa(MOFAobject, model_options = model_opts, training_optio
 
 Train the model: this should take ~5min.
 ```{r, message=FALSE, warning=FALSE, eval=TRUE}
-MOFAobject = run_mofa(MOFAobject, use_basilisk = FALSE)
+MOFAobject = run_mofa(MOFAobject, use_basilisk = TRUE)
 ```
 
 
