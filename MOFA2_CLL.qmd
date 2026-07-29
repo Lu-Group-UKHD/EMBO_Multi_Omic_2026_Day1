@@ -30,6 +30,14 @@ knitr::opts_chunk$set(cache = TRUE, autodep = TRUE)
 ```
 
 ```{r}
+# ONLY FOR WINDOWS USERS
+Sys.unsetenv('RETICULATE_PYTHON')
+reticulate::py_require("mofapy2", python_version = "3.12.12")
+reticulate::py_config()
+# run_mofa(..., use_basilisk=FALSE)
+```
+
+```{r}
 #| label: packages
 #| message: FALSE
 library("data.table")
